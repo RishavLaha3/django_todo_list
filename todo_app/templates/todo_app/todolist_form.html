@@ -5,19 +5,14 @@
 
 <h3>{{ title }}</h3>
 <div>
-    <div>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <input
-                value="Save"
-                type="submit">
-            <input
-                value="Cancel"
-                type="button"
-                onclick="location.href='{% url "index" %}';">
+            <p class="form-actions">
+                <input class="btn btn-primary" value="Save" type="submit">
+                <input class="btn btn-secondary" value="Cancel" type="button" onclick="location.href='{% url "index" %}';">
+            </p>
         </form>
-    </div>
 </div>
 
 {% endblock %}

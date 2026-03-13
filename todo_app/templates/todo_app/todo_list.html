@@ -25,17 +25,18 @@
             <p>There are no to-do items in this list.</p>
             {% endfor %}
         </ul>
-        <p>
+        <p class="form-actions">
             <input
+                class="btn btn-primary"
                 value="Add a new item"
                 type="button"
                 onclick="location.href='{% url "item-add" todo_list.id %}'"
             />
             <input
+                class="btn btn-danger"
                 value="Delete this list"
                 type="button"
-                onclick="location.href=
-                '{% url "list-delete" todo_list.id %}'" />
+                onclick="location.href='{% url "list-delete" todo_list.id %}'" />
         </p>
     </div>
 </div>

@@ -1,28 +1,28 @@
 <!-- todo_list/todo_app/templates/base.html -->
-<!-- Base template -->
 <!doctype html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Simple.css-->
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'todo_app/css/styles.css' %}">
     <title>Django To-do Lists</title>
 </head>
 
 <body>
-    <div>
-        <h1 onclick="location.href='{% url "index" %}'">
-            Django To-do Lists
-        </h1>
-    </div>
-    <div>
+    <main class="app-card">
+        <header class="app-header">
+            <h1 class="app-logo" onclick="location.href='{% url "index" %}'">
+                Django To-do
+            </h1>
+        </header>
         {% block content %}
         This content will be replaced by different html code for each page.
         {% endblock %}
-    </div>
+    </main>
+    <script src="{% static 'todo_app/js/app.js' %}"></script>
 </body>
 
 </html>

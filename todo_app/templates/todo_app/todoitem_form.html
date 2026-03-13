@@ -9,20 +9,13 @@
     <table>
         {{ form.as_table }}
     </table>
-    <input
-        value="Submit"
-        type="submit">
-    <input
-        value="Cancel"
-        type="button"
-        onclick="location.href='{% url "list" todo_list.id %}'">
-    {% if object %}
-        <input
-            value="Delete this item"
-            type="button"
-            onclick="location.href=
-            '{% url "item-delete" todo_list.id object.id %}'">
-    {% endif %}
+    <p class="form-actions">
+        <input class="btn btn-primary" value="Submit" type="submit">
+        <input class="btn btn-secondary" value="Cancel" type="button" onclick="location.href='{% url "list" todo_list.id %}'">
+        {% if object %}
+        <input class="btn btn-danger" value="Delete this item" type="button" onclick="location.href='{% url "item-delete" todo_list.id object.id %}'">
+        {% endif %}
+    </p>
 </form>
 
 {% endblock %}
