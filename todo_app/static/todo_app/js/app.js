@@ -1,8 +1,3 @@
-/**
- * Django To-do — Micro-animations (Vanilla JS)
- * Fade-in + slide-up on load and for empty-state message.
- */
-
 (function () {
   'use strict';
 
@@ -18,12 +13,10 @@
     var appCard = document.querySelector('.app-card');
     var emptyState = document.querySelector('.empty-state');
 
-    // 1. App card: fade-in + slide-up on load
     if (appCard) {
       addAnimateIn(appCard, 50);
     }
 
-    // 2. Empty-state message (e.g. "You have no lists!"): same animation when visible
     if (emptyState) {
       addAnimateIn(emptyState, 120);
     }

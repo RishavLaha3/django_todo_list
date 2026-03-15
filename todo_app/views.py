@@ -1,4 +1,3 @@
-# todo_list/todo_app/views.py
 from django.urls import reverse, reverse_lazy
 
 
@@ -81,8 +80,6 @@ class ItemUpdate(UpdateView):
     
 class ListDelete(DeleteView):
     model = ToDoList
-    # You have to use reverse_lazy() instead of reverse(),
-    # as the urls are not loaded when the file is imported.
     success_url = reverse_lazy("index")
 
 class ItemDelete(DeleteView):
